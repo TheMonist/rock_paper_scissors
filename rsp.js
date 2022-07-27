@@ -31,5 +31,8 @@ const computerSelection = getComputerChoice();
 console.log(playRound((playerSelection, computerSelection)));
 
 function game() {
-    // insert code and loop here
+    for (i = 0; i < 5; i++);
+    playerSelection = prompt()
+    computerSelection = computerPlay();
+    
 }
