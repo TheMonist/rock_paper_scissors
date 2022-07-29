@@ -1,3 +1,12 @@
+function computerPlay(){
+    let num = Math.floor(Math.random() * 3);
+    return num === 0 ? "Rock"
+        : num === 1 ? "Paper"
+        : "scissors";
+}
+
+// let computerSelection = computerPlay();
+
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         console.log("It's a tie!");
@@ -31,8 +40,33 @@ const computerSelection = getComputerChoice();
 console.log(playRound((playerSelection, computerSelection)));
 
 function game() {
+    let playerSelection, computerSelection, result;
+    let playerWins = 0;
+    let computerWins = 0;
+    const selections = ["ROCK", "PAPER", "SCISSORS"]
     for (i = 0; i < 5; i++);
     playerSelection = prompt()
     computerSelection = computerPlay();
     
+    while (!(selections.includes(playerSelection.toUpperCase()))) {
+        playerSelection =prompt();
+    }
+
+    console.log(`User plays ${playerSelection}, Computer plays ${computerSelection}`);
+    result = (gameRound(playerSelection, computerSelection));
+
+    if (result) {
+        playerWins += 1;
+    } else if (result === false) {
+        computerWins += 1;
+    }
+}   console.log(`Current Score - Player: $(playerWins), Computer: $(computerWins)`);
+
+if (playerWins > computerWins) {
+    return "User Wins!"
+} else if (computerWins > playerWins) {
+    return "Computer Wins! You Lose"
+} else {
+    return "No one wins! Play again?"
 }
+
