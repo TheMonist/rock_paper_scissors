@@ -44,7 +44,7 @@ function game() {
     let playerWins = 0;
     let computerWins = 0;
     const selections = ["ROCK", "PAPER", "SCISSORS"]
-    for (i = 0; i < 5; i++);
+    //for (i = 0; i < 5; i++);//
     playerSelection = prompt()
     computerSelection = computerPlay();
     
