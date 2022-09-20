@@ -7,6 +7,8 @@ function computerPlay(){
 
 // let computerSelection = computerPlay();
 
+document.querySelector('button').addEventListener('click', playRound);
+
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         console.log("It's a tie!");
