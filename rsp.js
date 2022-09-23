@@ -1,14 +1,22 @@
-function computerPlay(){
-    let num = Math.floor(Math.random() * 3);
-    return num === 0 ? "Rock"
-        : num === 1 ? "Paper"
-        : "scissors";
+let playerSelection = "";
+let computerSelection = "";
+
+//Random Number Generator for Computer
+const computerPlay = () => {
+    const randomNumber = Math.floor(Math.random() * 3);
+    if (randomNumber === 0) {
+        return "ROCK";
+    } else if (randomNumber === 1) {
+        return "PAPER";
+    } else if (randomNumber === 2) {
+        return "SCISSORS";
+    } 
 }
+console.log(computerPlay());
 
-// let computerSelection = computerPlay();
+//document.querySelector('button').addEventListener('click', playRound);
 
-document.querySelector('button').addEventListener('click', playRound);
-
+// Logic for Game
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         console.log("It's a tie!");
@@ -37,38 +45,38 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-console.log(playRound((playerSelection, computerSelection)));
-
-function game() {
+//Game Rounds
+function play() {
     let playerSelection, computerSelection, result;
-    let playerWins = 0;
-    let computerWins = 0;
-    const selections = ["ROCK", "PAPER", "SCISSORS"]
-    //for (i = 0; i < 5; i++);//
-    playerSelection = prompt()
-    computerSelection = computerPlay();
-    
-    while (!(selections.includes(playerSelection.toUpperCase()))) {
-        playerSelection =prompt();
+    let computerScore = 0;
+    let playerScore = 0;
+    const selections = ["ROCK", "PAPER", "SCISSORS"];
+
+    // Loop for five games
+    for (let i = 0; i < 5; i ++) {
+        let playerSelction = prompt("Pick a move");
+        const computerSelection = computerPlay();
+
+        //Loop for prompt
+        while((!selections.includes(playerSelection))) {
+            playerSelection = prompt("Pick a move");
+        }
+
+        console.log(`User plays ${playerSelection}, Computer plays ${computerSelection}`);
+        result = (playround(playerSelection, computerSelection));
+
+        //Scorekeeping
+        if(playerScore > computerScore) {
+            console.log("User Wins");
+            return "User Wins"
+        } else if (computerScore > playerScore) {
+            console.log("Computer Wins");
+            return "Computer Wins";
+        } else {
+            console.log("Tie");
+            return "No One Wins! Play Again?";
+        }
     }
-
-    console.log(`User plays ${playerSelection}, Computer plays ${computerSelection}`);
-    result = (gameRound(playerSelection, computerSelection));
-
-    if (result) {
-        playerWins += 1;
-    } else if (result === false) {
-        computerWins += 1;
-    }
-}   console.log(`Current Score - Player: $(playerWins), Computer: $(computerWins)`);
-
-if (playerWins > computerWins) {
-    return "User Wins!"
-} else if (computerWins > playerWins) {
-    return "Computer Wins! You Lose"
-} else {
-    return "No one wins! Play again?"
 }
 
+play();
