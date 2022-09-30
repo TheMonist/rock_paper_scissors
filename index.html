@@ -3,25 +3,30 @@
     <head>
         <link rel="stylesheet" href="styles.css">
         <meta charset="utf-8">
-        <script src="rsp.js"></script>
         <title>Rock, Paper, Scissors Game</title>
     </head>
     <body>
         <h1>Rock, Paper, Scissors</h1>
         <section>
-            <div>
+            <div class="rules">
+                <img src="https://pxt.azureedge.net/blob/68f66c3ddc3acfc4c53157abf92eace202d46db2/static/courses/csintro/conditionals/rock-paper-scissors-items.png" alt="image of rock paper scissors game">
+                <p>You know what to do. See if you can beat the computer in a game of rock, paper, scissors. Click the start button to start the game and the reset if you want to reset.</p>
+            </div>
+            <div class="container">
                 <!--Buttons For Game-->
-                <button type="button" class="button">Rock</button>
-                <button type="button" class="button">Paper</button>
-                <button type="button" class="button">Scissors</button>
+                <button type="button" id="rock">ROCK</button>
+                <button type="button" id="paper">PAPER</button>
+                <button type="button" id="scissors">SCISSORS</button>
             </div>
-            <div>
+            <div class="container result">
                 <!--Scorekeeping-->
+                <span id="player-score">Player Score: </span>
+                <span id="computer-score">ComputerScore: </span>
             </div>
-            <div>
-                <!--Reset/Start Again-->
-                <button type="button" class="reset">Play Again?</button>
+            <div class="container">
+                <button type="button" id="reset">RESET</button>
             </div>
         </section>
+        <script src="/rsp.js" async defer></script>
     </body>
 </html>

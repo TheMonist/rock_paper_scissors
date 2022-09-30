@@ -1,0 +1,32 @@
+body {
+    background-image: linear-gradient(to right, #D4145A, #FBB03B);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.rules {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #F9FAF8;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+img {
+    border: 2px solid #F9FAF8;
+    border-radius: 12px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid #F9FAF8;
+    border-radius: 12px;
+}
