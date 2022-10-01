@@ -1,6 +1,6 @@
 body {
-    background-image: linear-gradient(to right, #D4145A, #FBB03B);
-    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, #FCE4B5, #F9E08E);
+    font-family: 'Bungee Spice', sans-serif;
 }
 
 h1 {
@@ -20,6 +20,7 @@ h1 {
 img {
     border: 2px solid #F9FAF8;
     border-radius: 12px;
+    box-shadow: 0 0 10px;
 }
 
 .container{
@@ -29,4 +30,8 @@ img {
     align-items: center;
     border: 2px solid #F9FAF8;
     border-radius: 12px;
+}
+
+button {
+    font-family: 'Bungee Spice', sans-serif;
 }
