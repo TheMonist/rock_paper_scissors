@@ -1,6 +1,6 @@
 body {
     background-image: linear-gradient(to right, #FCE4B5, #F9E08E);
-    font-family: 'Bungee Spice', sans-serif;
+    font-family: 'Bungee', sans-serif;
 }
 
 h1 {
@@ -33,5 +33,5 @@ img {
 }
 
 button {
-    font-family: 'Bungee Spice', sans-serif;
+    font-family: 'Bungee', sans-serif;
 }
